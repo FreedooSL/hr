@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="paperformat_accident_fremap_report_local" model="report.paperformat">
+        <field name="name">Volante Fremap</field>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">2</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="action_accident_fremap_report"
+            string="Volante Fremap"
+            model="accident.tracking.report.wiz"
+            report_type="qweb-pdf"
+            name="hr_accident_mutual_insurance.hr_employee_accident_fremap_report"
+            file="hr_accident_mutual_insurance.hr_employee_accident_fremap_report"
+            print_report_name="'volante-fremap'"/>
+
+    <template id="hr_employee_accident_fremap_report">
+            <t t-call="hr_accident_mutual_insurance.external_layout_custom">
+                <t t-foreach="docs" t-as="employee"/>
+                <div class="page">
+                    <div class="oe_structure"/>
+                        <div>
+                            <img t-att-src="'/hr_accident_mutual_insurance/static/img/fremap.png'" style="max-height: 450px; max-width: 250px"/>
+                        </div>
+                        <br/>
+                        <div style="display: table; clear: both; width: 100%;">
+                            <table class="table table-sm o_main_table" 
+                                   style="text-align: left; border: 1px solid #4A4F58; 
+                                            padding: 10px 9px 10px 9px; width:90%; margin-left: 5%;">
+                                <t>
+                                    <tr style="border: 1px solid #4A4F58">
+                                        <td style="width:60%;">
+                                            Empresa: <span t-field="res_company.name"/>
+                                        </td>
+                                        <td style="width:40%; border: 1px solid #4A4F58">
+                                            Número patronal: 20004184896
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 1px solid #4A4F58">
+                                        <td colspan="2">
+                                            Domicilio: Oialume bidea 28 Astigarraga (Gipuzkoa)
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                        <p style="text-align: center; font-size: 17px;">
+                            ROGAMOS PRESTE ASISTENCIA SANITARIA AL TRABAJADOR DE ESTA EMPRESA
+                        </p>
+                        <div style="display: table; clear: both; width: 100%;">
+                            <table class="table table-sm o_main_table" 
+                                   style="text-align: left; border: 1px solid #4A4F58; 
+                                            padding: 10px 9px 10px 9px; width:90%; margin-left: 5%;">
+                                <t>
+                                    <tr style="border: 1px solid #4A4F58">
+                                        <td style="width:60%;">
+                                            Nombre y apellidos del trabajador accidentado: <span t-field="docs.accident_id.employee_id.name"/>
+                                        </td>
+                                        <td style="width:40%; border: 1px solid #4A4F58">
+                                            DNI: <span t-field="docs.accident_id.employee_id.identification_id"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 1px solid #4A4F58">
+                                        <td>
+                                            Domicilio del trabajador: <span t-field="docs.accident_id.employee_id.address_home_id.street"/> 
+                                            <span t-field="docs.accident_id.employee_id.address_home_id.city"/>
+                                        </td>
+                                        <td style="border: 1px solid #4A4F58">
+                                            No afiliación S. S.: <span t-field="docs.accident_id.employee_id.ssnid"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                        <p style="text-align: center; font-size: 17px;">
+                            QUE HA SUFRIDO UN ACCIDENTE DE TRABAJO A LAS
+                        </p>
+                        <div style="display: table; clear: both; width: 100%;">
+                            <table class="table table-sm o_main_table" 
+                                   style="text-align: center; 
+                                            padding: 10px 9px 10px 9px; width:90%; margin-left: 5%;">
+                                <t>
+                                    <tr>
+                                        <td style="border: 1px solid #4A4F58; width:30%">
+                                            Hora: 
+                                            <br/>
+                                            <span t-field="docs.accident_id.hour_accident" t-options="{'widget': 'float_time'}"/>
+                                        </td>
+                                        <td style="width:15%;">
+                                            Horas del días
+                                        </td>
+                                        <td style="width:30%; border: 1px solid #4A4F58">
+                                            Fecha del accidente: 
+                                            <br/>
+                                            <span t-field="docs.accident_id.date_accident"/>
+                                        </td>
+                                        <td style="width: 25%;">
+
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 1px solid #4A4F58">
+                                        <td colspan="4" style="border: 1px solid #4A4F58">
+                                            Descripción del accidente: 
+                                            <br/>
+                                            <span t-field="docs.accident_id.description_accident"/> 
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                        <p style="margin-right: 5%; text-align: right;">
+                            Firma y sello de la Empresa
+                        </p>
+                        <p style="margin-left: 5%; text-align: justify;">
+                            <strong>NOTA:</strong>
+                            <br/>
+                            Este documento no equivale ni sustituye al parte de accidente aprobado por Orden Ministerial de 16/12/87
+                            (B.O.E. de 29/12).
+                            <br/>
+                            En el supuesto de producirse la baja laboral, la empresa dispone de 5 días hábiles para presentar el parte oficial
+                            en las Oficinas de Fremap.
+                            <br/>
+                            La presentación de este documento en Servicios Médicos distintos de los de FREMAP no implica que la Mutua
+                            asuma el coste de la asistencia prestada.
+                        </p>
+                </div>
+            </t>
+    </template>
+</odoo>

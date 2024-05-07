@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_accident_tracking_report_wiz_administrator,accident.tracking.report.wiz,model_accident_tracking_report_wiz,hr.group_hr_manager,1,1,1,1

@@ -1,0 +1,510 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* accident_report_tracking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-27 12:01+0000\n"
+"PO-Revision-Date: 2023-09-27 14:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.open_accident_wiz_print_report_wizard
+msgid ""
+"<span class=\"fa fa-bell o_form_label\"/>\n"
+"                        Please note that if you choose the print option, "
+"this report will be saved for documentation traceability.\n"
+"                        <br/>\n"
+"                        - Check the recorded data to avoid errors."
+msgstr ""
+"<span class="fa fa-bell o_form_label”/>\n"
+"                        Tenga en cuenta que si elige la opción de "
+"impresión, este informe se guardará para la trazabilidad de la "
+"documentación.\n"
+"                        <br/>\n"
+"                        - Comprueba los datos registrados para evitar "
+"errores."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__accident_id
+msgid "Accident"
+msgstr "Accidente"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_hr_employee__accident_count
+msgid "Accident Count"
+msgstr "Número de accidentes"
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/models/accident_tracking.py:0
+#: model:ir.model,name:accident_report_tracking.model_accident_tracking
+#, python-format
+msgid "Accident tracking for employee"
+msgstr "Seguimiento de accidentes"
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/models/accident_tracking.py:0
+#: model:ir.model,name:accident_report_tracking.model_accident_tracking_report
+#, python-format
+msgid "Accident tracking report"
+msgstr "Informe de seguimiento de accidentes"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields.selection,name:accident_report_tracking.selection__accident_tracking__type_accident__with
+#: model:ir.model.fields.selection,name:accident_report_tracking.selection__accident_tracking_report_wiz__type_accident__with
+msgid "Accident with sick leave"
+msgstr "Accidente con investigación y baja"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields.selection,name:accident_report_tracking.selection__accident_tracking__type_accident__without
+#: model:ir.model.fields.selection,name:accident_report_tracking.selection__accident_tracking_report_wiz__type_accident__without
+msgid "Accident without sick leave"
+msgstr "Accidente con investigación"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.accident_tracking_employee_form_view
+msgid "Accidente con BAJA"
+msgstr ""
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.accident_tracking_employee_form_view
+msgid "Accidente sin BAJA"
+msgstr ""
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/models/hr_employee.py:0
+#: model:ir.actions.act_window,name:accident_report_tracking.action_accident_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.hr_employee_accident_form_view
+#, python-format
+msgid "Accidents"
+msgstr "Accidentes"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Actividad Decoración de excepción"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__address_location
+msgid "Address"
+msgstr "Dirección"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__attachment_id
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nº de archivos adjuntos"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.open_accident_wiz_print_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__cif_location
+msgid "Cif Company"
+msgstr "CIF de la compañía"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__name_location
+msgid "Company name"
+msgstr "Nombre de la compañía"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__create_date_attach
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__create_uid_attach
+msgid "Create User"
+msgstr "Creado por"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__create_uid
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__create_uid
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__create_date
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__create_date
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__date_accident
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__datetime_accident
+msgid "Date of accident"
+msgstr "Fecha del accidente"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__description_accident
+msgid "Description Accident"
+msgstr "Descripción detallada"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__description_lesion
+msgid "Description of injury"
+msgstr "Descripción del daño"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__bool_company
+msgid "Did it happen in the company?"
+msgstr "¿Ocurrió en la empresa?"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__display_name
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__display_name
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__attachment
+msgid "Download"
+msgstr "Descargar"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__eco_activity_location
+msgid "Economic Activity"
+msgstr "Actividad económica"
+
+#. module: accident_report_tracking
+#: model:ir.model,name:accident_report_tracking.model_hr_employee
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono De la Fuente, por ejemplo, fa-tasks"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__has_message
+msgid "Has Message"
+msgstr "Mensaje"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__hour_accident
+msgid "Hour of accident"
+msgstr "Hora del accidente"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__how
+msgid "How was the injured person injured?"
+msgstr "¿Cómo se lesionó la persona herida?"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__id
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__id
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, los nuevos mensajes requieren su atención."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, algunos mensajes tienen un error de entrega."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking____last_update
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report____last_update
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__write_uid
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__write_uid
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__write_date
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__write_date
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__date_leave
+msgid "Leaving date"
+msgstr "Fecha de baja"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_has_error
+msgid "Message Delivery error"
+msgstr "Error en la entrega del mensaje"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.accident_tracking_employee_form_view
+msgid "Min. characters 20"
+msgstr "Mín. caracteres 20"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Plazo de mi actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__name
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Plazo de la próxima actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Plazo de la próxima actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__phone_location
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.accident_tracking_employee_form_view
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.open_accident_wiz_print_report_wizard
+msgid "Print Accident Investigation"
+msgstr "Investigación de accidentes"
+
+#. module: accident_report_tracking
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.open_accident_wiz_print_report_wizard
+msgid "Print Report"
+msgstr "Informe"
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/models/accident_tracking.py:0
+#, python-format
+msgid "Print accident report"
+msgstr "Imprimir informe de accidente"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report__accident_id
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__report_id
+#: model_terms:ir.ui.view,arch_db:accident_report_tracking.accident_tracking_employee_form_view
+msgid "Report"
+msgstr "Informes"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__staff
+msgid "Staff"
+msgstr "Personal"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en las actividades\n"
+"Atrasado: La fecha de vencimiento ya ha pasado\n"
+"Hoy: La fecha de la actividad es hoy\n"
+"Planificada: Actividades futuras."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__type_accident
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking_report_wiz__type_accident
+msgid "The accident is ..."
+msgstr "Tipo de accidente"
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/models/accident_tracking.py:0
+#, python-format
+msgid "The field [accident.tracking] is less than 20 characters long"
+msgstr "The field [accident.tracking] is less than 20 characters long"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__tracking_report_ids
+msgid "Tracking of reports"
+msgstr "Seguimiento de informes"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__type_work
+msgid "Type Work"
+msgstr "Tipo de trabajo"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de la actividad de excepción registrada."
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,help:accident_report_tracking.field_accident_tracking__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de la comunicación en la web"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__abnormal
+msgid ""
+"What abnormal event that deviates from the deviating from the usual "
+"process, triggered the accident?"
+msgstr ""
+"¿Qué acontecimiento anormal que se desvía del proceso habitual desencadenó "
+"el accidente?"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__type_location
+msgid "What kind of location was it in?"
+msgstr "¿En qué lugar se encontraba?"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__doing
+msgid "What specifically were you doing at the time of the accident?"
+msgstr "¿Qué estaba haciendo específicamente en el momento del accidente?"
+
+#. module: accident_report_tracking
+#. odoo-python
+#: code:addons/accident_report_tracking/wizards/accident_tracking_wizard.py:0
+#, python-format
+msgid "Wizard to print accident report"
+msgstr "Imprimir informe de accidente"
+
+#. module: accident_report_tracking
+#: model:ir.model.fields,field_description:accident_report_tracking.field_accident_tracking__work_hours
+msgid "Work Schedule"
+msgstr "Horario de trabajo"
+
+#. module: accident_report_tracking
+#: model:ir.model,name:accident_report_tracking.model_accident_tracking_report_wiz
+msgid "accident.tracking.report.wiz"
+msgstr ""

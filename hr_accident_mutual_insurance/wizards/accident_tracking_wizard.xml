@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="open_accident_wiz_print_report_wizard" model="ir.ui.view">
+        <field name="name">Imprimir informe de accidente</field>
+        <field name="model">accident.tracking.report.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Formulario">
+                <sheet>
+                    <group>
+                        <p class="oe_grey">
+                        <i class="fa fa-bell"/>
+                        <span style="margin-left: 3px;">
+                            Tenga en cuenta que si elige la opción de imprimir, este informe será guardado para la trazabilidad de la documentación 
+                        </span>
+                        <br/>
+                        <span style="margin-left: 20px;">
+                            Revise bien los datos registrados para evitar errores
+                        </span>
+                        </p>
+                    </group>
+                    <group>
+                        <field name="type_accident" invisible="1"/>
+                        <field name="report_id" readonly="1" widget="selection"/>
+                        <field name="accident_id" invisible="1"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="done" string="Imprimir Informe"
+                            type="object" class="oe_highlight"/>
+                    <button name="print_report_accident" string="Imprimir Investigación de Accidentes"
+                            type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel" class="btn btn-default"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

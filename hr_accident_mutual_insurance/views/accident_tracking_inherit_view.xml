@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="accident_tracking_inherit_form_view" model="ir.ui.view">
+        <field name="name">accident.tracking.inherit.form.view</field>
+        <field name="model">accident.tracking</field>
+        <field name="inherit_id" ref="hr_accident_report_tracking.accident_tracking_employee_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">  
+                <button name="open_accident_wiz" type="object" class="oe_highlight" string="Imprimir"/>
+                <widget name="attach_document" string="Attach Report" action="message_post" attrs="{'invisible': ['|', ('attachment_number', '&lt;', 1), ('id','=',False)]}"/>
+                <widget name="attach_document" string="Attach Report" action="message_post" highlight="1" attrs="{'invisible': ['|',('attachment_number', '&gt;=', 1), ('id','=',False)]}"/>
+            </xpath>
+            <group name="group_without_accident" position="after">
+                <group string="Report">
+                    <field name="tracking_report_ids" nolabel="1" readonly="1" colspan="2">
+                        <tree>
+                            <field name="name" style="pointer-events:none;"/>
+                            <field name="create_uid_attach" style="pointer-events:none;"/>
+                            <field name="create_date_attach" style="pointer-events:none;"/>
+                            <field name="attachment" widget="binary"/>
+                        </tree>
+                    </field>
+                    <field name="attachment_number" invisible="1"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

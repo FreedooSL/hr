@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id="action_accident_unigemsa_report"
+            string="Sistema Delta (Unigemsa)"
+            model="accident.tracking.report.wiz"
+            report_type="qweb-pdf"
+            name="hr_accident_mutual_insurance.hr_employee_accident_unigemsa_report"
+            file="hr_accident_mutual_insurance.hr_employee_accident_unigemsa_report"
+            print_report_name="'sistema-delta-unigemsa'"/>
+
+    <template id="hr_employee_accident_unigemsa_report">
+            <t t-call="hr_accident_mutual_insurance.external_layout_custom">
+                <t t-foreach="docs" t-as="employee"/>
+                <div class="page">
+                    <div class="oe_structure"/>
+                        <div>
+                            <img t-att-src="'/hr_accident_mutual_insurance/static/img/unigemsa.png'" style="margin-left: 300px; max-height: 450px; max-width: 250px"/>
+                        </div>
+                        <br/>
+                        <div>
+                            <table class="table table-sm o_main_table" style="padding: 10px 9px 10px 9px; width:70%; margin-left: 15%;">
+                                <tr>
+                                    <td style="width: 20%;">
+                                        <span>
+                                            Empresa
+                                        </span>
+                                    </td>
+                                    <td style="width: 30%; border-bottom: 1px solid #4A4F58;">
+                                        <span t-field="res_company.name"/>
+                                    </td>
+                                    <td style="width: 20%">
+                                        <span>
+                                            Trabajador
+                                        </span>
+                                    </td>
+                                    <td style="width: 30%; border-bottom: 1px solid #4A4F58;">
+                                        <span t-field="docs.accident_id.employee_id.name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br/>
+                        <table class="table table-sm o_main_table" style="padding: 10px 9px 10px 9px; width:100%;">
+                            <tr>
+                                <td style="width: 100%; border-top: 2px solid #4A4F58; border-bottom: 2px solid #4A4F58; text-align: center; font-size: 19px;">
+                                    <strong style="color: red;">
+                                        Datos necesarios para tramitar un parte de accidente
+                                    </strong>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <div style="display: table; clear: both; width: 100%;">
+                            <table class="table table-sm o_main_table" style="padding: 10px 9px 10px 9px; width:100%">
+                                <tr>
+                                    <td style="width: 40%; height: 40px;">
+                                        <strong>
+                                            Fecha del Accidente
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.datetime_accident"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Fecha de baja
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.date_leave"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Descripción del accidente
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.description"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Hora de trabajo
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.work_hours"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            ¿Qué tipo de trabajo estaba realizando o en que proceso participaba?
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.type_work"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            ¿Qué estaba haciendo concretamente cuando se produjo el accidente?
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.doing"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            ¿Qué hecho anormal que se apartase del proceso habitual, desencadenó el accidente?
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.abnormal"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            ¿Cómo se ha lesionado la persona accidentada?
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.how"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Descripción de la lesión
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.description_lesion"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            ¿En qué tipo de lugar se encontraba?
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.type_location"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <table class="table table-sm o_main_table" style="padding: 10px 9px 10px 9px; width:70%; margin-left: 15%" t-if="docs.accident_id.bool_company == True">
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Nombre o Razón Social
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.name_location"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            C.I.F. Y C.C.C.
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.cif_location"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Actividad económica
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.eco_activity_location"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Domicilio y Telf
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.address_location"/> / 
+                                        <span t-field="docs.accident_id.phone_location"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%">
+                                        <strong>
+                                            Plantilla
+                                        </strong>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #4A4F58; width: 60%;">
+                                        <span t-field="docs.accident_id.staff"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+            </t>
+    </template>
+</odoo>

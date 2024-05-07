@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_employee_accident_form_view" model="ir.ui.view">
+        <field name="name">hr.employee.accident.form.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="get_accident" class="oe_stat_button" icon="fa-ambulance" type="object">
+                    <field name="accident_count" widget="statinfo" string="Accidents"/>
+                </button>
+            </div>
+        </field>
+    </record>
+
+    <record id="accident_tracking_employee_form_view" model="ir.ui.view">
+        <field name="name">accident.tracking.employee.form.view</field>
+        <field name="model">accident.tracking</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed" readonly="1"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1 class="d-flex">
+                            <field name="name" attrs="{'readonly': [('name', '=', 'Nuevo registro')]}"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id" readonly="1"/>
+                            <field name="type_accident" required="1"/>
+                        </group>
+                    </group>
+                    <group string="Accidente con BAJA" attrs="{'invisible': [('type_accident', '!=', 'with')]}" name="group_with_accident">
+                        <group>
+                            <field name="datetime_accident"/>
+                            <field name="date_leave"/>
+                            <field name="work_hours"/>
+                            <field name="description" placeholder="Mín. caracteres 20"/>
+                            <field name="type_work"/>
+                            <field name="doing" placeholder="Mín. caracteres 20"/>
+                            <field name="abnormal" placeholder="Mín. caracteres 20"/>
+                            <field name="how" placeholder="Mín. caracteres 20"/>
+                        </group>
+                        <group>
+                            <field name="description_lesion" placeholder="Mín. caracteres 20"/>
+                            <field name="type_location"/>
+                            <field name="bool_company"/>
+                            <field name="name_location" attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                            <field name="cif_location"  attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                            <field name="eco_activity_location"  attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                            <field name="address_location"  attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                            <field name="phone_location"  attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                            <field name="staff"  attrs="{'invisible': [('bool_company', '!=', True)]}"/>
+                        </group>
+                    </group>
+                    <group string="Accidente sin BAJA" attrs="{'invisible': [('type_accident', '!=', 'without')]}" name="group_without_accident">
+                        <group>
+                            <field name="date_accident"/>
+                            <field name="hour_accident" widget="float_time"/>
+                            <field name="description_accident" placeholder="Mín. caracteres 20"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="accident_tracking_employee_tree_view" model="ir.ui.view">
+        <field name="name">accident.tracking.employee.form.view</field>
+        <field name="model">accident.tracking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type_accident"/>
+                <field name="state" decoration-success="state == 'confirmed'" decoration-info="state == 'draft'" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_accident_tracking" model="ir.actions.act_window">
+        <field name="name">Accidents</field>
+        <field name="res_model">accident.tracking</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
