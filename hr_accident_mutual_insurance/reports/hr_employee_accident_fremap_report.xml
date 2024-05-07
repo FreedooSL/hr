@@ -23,7 +23,7 @@
             print_report_name="'volante-fremap'"/>
 
     <template id="hr_employee_accident_fremap_report">
-            <t t-call="hr_accident_mutual_insurance.external_layout_custom">
+            <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="employee"/>
                 <div class="page">
                     <div class="oe_structure"/>

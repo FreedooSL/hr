@@ -80,7 +80,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="type_accident"/>
+                <field name="type_accident" string="Subjet"/>
                 <field name="state" decoration-success="state == 'confirmed'" decoration-info="state == 'draft'" widget="badge"/>
             </tree>
         </field>

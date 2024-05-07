@@ -18,18 +18,22 @@ class AccidentTrackingReportWiz(models.TransientModel):
 
     def action_get_attachment(self):
         if self.type_accident == 'with':
-            pdf = self.env.ref('hr_accident_mutual_insurance.action_accident_unigemsa_report')._render_qweb_pdf(self.ids)
-            b64_pdf = base64.b64encode(pdf[0])
             name = "sistema-delta-unigemsa"
+            
+            pdf_file = self.env['ir.actions.report']._render_qweb_pdf('hr_accident_mutual_insurance.action_accident_unigemsa_report', self.id)
+            pdf_file = pdf_file[0]
+            self.pdf_file = base64.b64encode(pdf_file)
 
         elif self.type_accident == 'without':
-            pdf = self.env.ref('hr_accident_mutual_insurance.action_accident_fremap_report')._render_qweb_pdf(self.ids)
-            b64_pdf = base64.b64encode(pdf[0])
             name = "volante-fremap"
+
+            pdf_file = self.env['ir.actions.report']._render_qweb_pdf('hr_accident_mutual_insurance.action_accident_fremap_report', self.id)
+            pdf_file = pdf_file[0]
+            self.pdf_file = base64.b64encode(pdf_file)
+
         return self.env['ir.attachment'].create({
             'name': name,
             'type': 'binary',
-            'datas': b64_pdf,
             #'datas_fname': name + '.pdf',
             'store_fname': name,
             'res_model': self._name,
